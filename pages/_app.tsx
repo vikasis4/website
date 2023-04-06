@@ -1,6 +1,18 @@
 import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
+import { Exo_2 } from 'next/font/google';
+
+const font = Exo_2({
+  subsets:['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
+// weight:'400'
+// weight: ['100', '200', '300', '400', '500', '600', '700'],
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <main className={font.className}>
+      <Component {...pageProps} />
+    </main>
+  )
 }

@@ -1,0 +1,41 @@
+@import "mixin";
+@import "variable";
+
+.main {
+    @include flex(space-between, center, row);
+    padding: 0.7rem;
+    background-color: white;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        color: $accent;
+    }
+
+    .one_one {
+        @include flex(center, center, row);
+        gap: 0.8rem
+    }
+
+    .one {
+        @include flex(center, center, row);
+        gap: 3rem;
+
+        ul {
+            @include flex(center, center, row);
+            gap: 2rem;
+            list-style: none;
+            font-weight: 700;
+
+            li {
+                padding-bottom: 3px;
+                transition: all 0.3s;
+                border-bottom: 2px solid black;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "mixin";
+@import "variable";
+
+.main {
+    background-color: $bg2;
+}
+
+.one {
+    @include flex(space-between, center, row);
+
+    .one_one {
+        @include flex(center, flex-start, column);
+        gap: 1rem;
+
+        padding-left: 4rem;
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1;
+
+            span {
+                color: $accent
+            }
+        }
+
+        h2 {
+            main {
+                @include flex(center, center, row);
+                gap: 0.4rem;
+            }
+
+            line-height: 1.5;
+            font-size:1.1rem;
+            font-weight: 400;
+            padding-bottom: 1.8rem;
+            padding-top: 0.5rem;
+        }
+    }
+}
