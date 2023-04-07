@@ -1,0 +1,126 @@
+@import "mixin";
+@import "variable";
+
+.footer_main {
+    height: max-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem
+}
+
+.footer_one {
+    color: white;
+    display: flex;
+    gap: 8rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.footer_one div {
+    list-style: none;
+    width: 20%;
+}
+
+.footer_two {
+    height: 40%;
+    display: flex;
+    margin-top: 4rem;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.social_class {
+    margin: 2rem auto;
+    width: max-content;
+}
+
+.social_class ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.footer_brand {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem
+}
+
+.footer_nil {
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+    bottom: 3.5rem
+}
+
+.footer_ek div li a:hover,
+.footer_do div li a:hover,
+.footer_teen div li a:hover {
+    cursor: pointer;
+    color: $accent;
+}
+
+.footer_ek div li,
+.footer_do div li,
+.footer_teen div li {
+    padding-bottom: 1rem;
+    width: max-content;
+    font-size: 1.4rem;
+}
+.footer_ek div li a,
+.footer_do div li a,
+.footer_teen div li a {
+    color:black;
+    font-size: 1.2rem;
+}
+
+.footer_ek h1,
+.footer_do h1,
+.footer_teen h1 {
+    border-bottom: 0.2rem solid black;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.f_gappers {
+    height: 14rem;
+    background-color: #1b1b1b
+}
+
+.fotter_t_t {
+    font-size: 3rem;
+    border-bottom: 0.2rem solid black;
+}
+
+
+.footer_th_t h1 {
+    color: black;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.footer_th_t {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 4rem
+}
+
+.footer_three h1 {
+    font-weight: 600;
+}
+
+.footer_three {
+    display: flex;
+    padding-top: 2rem;
+    justify-content: center;
+    place-items: center;
+    gap: 2rem;
+    color: black;
+    flex-direction: column;
+}
