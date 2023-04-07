@@ -21,7 +21,7 @@ export default function Home() {
 
         <div className={styles.one}>
           <div className={styles.one_one}>
-            <h1><span>India's</span> Best <br /> Guidance Platform</h1>
+            <h1><span>India&apos;s</span> &nbsp;Best <br /> Guidance Platform</h1>
             <h2>
               <main>
                 <Image src={object.link} alt="rankboost points" width={object.w} height={object.h} />
