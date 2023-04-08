@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '@/styles/TopMenu.module.scss'
 import Image from 'next/image'
 import ExploreBtn from './ExploreBtn'
+import Link from 'next/link'
 
 function TopMenu() {
     return (
@@ -18,9 +19,9 @@ function TopMenu() {
                 </div>
                 <div className={styles.one}>
                     <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
+                        <li><Link href={'/'}>Home</Link></li>
+                        <li><Link href={'/about_us'}>About Us</Link></li>
+                        <li><Link href={'/contact_us'}>Contact us</Link></li>
                     </ul>
                     <ExploreBtn fontSize='1rem' width={30} height={30} />
                 </div>
