@@ -22,6 +22,7 @@ function ExploreBtn(props:btn) {
                     alt="rankboost logo"
                     width={width}
                     height={height}
+                    className={styles.img}
                 />
                 Explore
             </button>

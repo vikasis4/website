@@ -16,5 +16,19 @@
     &:hover {
         background-color: black;
         cursor: pointer;
+        .img {
+            animation: 1s infinite alternate img;
+        }
+    }
+}
+
+
+@keyframes img {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
     }
 }

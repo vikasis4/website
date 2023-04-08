@@ -1,0 +1,12 @@
+@import "mixin";
+@import "variable";
+
+.one{
+    padding-top:8rem;
+    h1{
+        text-align:center;
+    }
+    p{
+        padding: 4rem 6rem;
+    }
+}

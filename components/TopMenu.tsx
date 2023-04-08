@@ -3,8 +3,13 @@ import styles from '@/styles/TopMenu.module.scss'
 import Image from 'next/image'
 import ExploreBtn from './ExploreBtn'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 function TopMenu() {
+
+    const router = useRouter()
+    var focus = {color: '#5A4FCF', borderColor: '#5A4FCF'}
+
     return (
         <>
             <div className={styles.main}>
@@ -19,9 +24,9 @@ function TopMenu() {
                 </div>
                 <div className={styles.one}>
                     <ul>
-                        <li><Link href={'/'}>Home</Link></li>
-                        <li><Link href={'/about_us'}>About Us</Link></li>
-                        <li><Link href={'/contact_us'}>Contact us</Link></li>
+                        <li><Link style={router.pathname === '/' ? focus : {}} href={'/'}>Home</Link></li>
+                        <li><Link style={router.pathname === '/about_us' ? focus : {}} href={'/about_us'}>About Us</Link></li>
+                        <li><Link style={router.pathname === '/contact_us' ? focus : {}} href={'/contact_us'}>Contact us</Link></li>
                     </ul>
                     <ExploreBtn fontSize='1rem' width={30} height={30} />
                 </div>

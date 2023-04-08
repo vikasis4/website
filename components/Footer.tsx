@@ -22,11 +22,11 @@ const Footer = () => {
                     <ul>
                         <li><Link href={'/'}>Home</Link></li>
                         <li><Link href={'/'}>Blogs</Link></li>
-                        <li><Link href={'/'}>About Us</Link></li>
-                        <li><Link href={'/'}>Contact Us</Link></li>
-                        <li><Link href={'/'}>Refund Policy</Link></li>
-                        <li><Link href={'/'}>Privacy Policy</Link></li>
-                        <li><Link href={'/'}>Terms and Conditions</Link></li>
+                        <li><Link href={'/about_us'}>About Us</Link></li>
+                        <li><Link href={'/contact_us'}>Contact Us</Link></li>
+                        <li><Link href={'/info/refund'}>Refund Policy</Link></li>
+                        <li><Link href={'/info/privacy'}>Privacy Policy</Link></li>
+                        <li><Link href={'/info/term'}>Terms and Conditions</Link></li>
                     </ul>
                 </div>
                 <div className={styles.two_2}>
