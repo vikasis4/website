@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '@/styles/Abouts.module.scss'
 import TopMenu from '@/components/TopMenu'
-import Image from 'next/image'
 import Footer from '@/components/Footer'
 
 function index() {
