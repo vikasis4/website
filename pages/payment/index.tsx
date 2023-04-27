@@ -8,7 +8,7 @@ function index() {
         <h2>Payment Processing</h2>
     </div>
     </>
-  )
+  ) 
 }
 
 export default index
