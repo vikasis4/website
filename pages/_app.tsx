@@ -6,14 +6,17 @@ const font = Exo_2({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
+import { MenuProvider } from '../context/Navbar'
 // weight:'400'
 // weight: ['100', '200', '300', '400', '500', '600', '700'],
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={font.className}>
+    <MenuProvider>
+      <main className={font.className}>
         <Component {...pageProps} />
         <Analytics />
-    </main>
+      </main>
+    </MenuProvider>
   )
 }

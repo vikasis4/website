@@ -4,13 +4,14 @@ import Image from 'next/image'
 import ExploreBtn from './ExploreBtn'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
+import { MenuContext } from '@/context/Navbar'
 
 function TopMenu() {
 
     const router = useRouter();
     const [width, setWidth] = useState(1000);
-    const [transform, setTransform] = useState(-100);
+    const useMenu = React.useContext(MenuContext);
+    var { transform, setTransform } = useMenu
 
     var focus = { color: '#5A4FCF', borderColor: '#5A4FCF' };
     useEffect(() => {
@@ -40,21 +41,29 @@ function TopMenu() {
 
     return (
         <>
-            <div className={styles.menu} style={{ transform: `translateX(${transform}%)` }} >
-                <Image
-                    src="/logo2.png"
-                    alt="rankboost logo"
-                    width={200}
-                    height={200}
-                />
-                <div className={styles.MenuOne}>
-                    <ul>
-                        <li><Link style={router.pathname === '/' ? menuFocus.select : menuFocus.deny} href={'/'}>Home</Link></li>
-                        <li><Link style={router.pathname === '/about_us' ? menuFocus.select : menuFocus.deny} href={'/about_us'}>About Us</Link></li>
-                        <li><Link style={router.pathname === '/contact_us' ? menuFocus.select : menuFocus.deny} href={'/contact_us'}>Contact us</Link></li>
-                    </ul>
-                </div>
-            </div>
+            {
+                width < 480 ?
+
+                    <div className={styles.menu} onClick={close} style={{ transform: `translateX(${transform}%)` }} >
+                        <Image
+                            src="/logo2.png"
+                            alt="rankboost logo"
+                            width={200}
+                            height={200}
+                        />
+                        <div className={styles.MenuOne}>
+                            <ul>
+                                <li><Link style={router.pathname === '/' ? menuFocus.select : menuFocus.deny} href={'/'}>Home</Link></li>
+                                <li><Link style={router.pathname === '/about_us' ? menuFocus.select : menuFocus.deny} href={'/about_us'}>About Us</Link></li>
+                                <li><Link style={router.pathname === '/contact_us' ? menuFocus.select : menuFocus.deny} href={'/contact_us'}>Contact us</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    :
+
+                    ''
+            }
 
             <div className={styles.main}>
                 <div className={styles.one_one}>
