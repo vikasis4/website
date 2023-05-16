@@ -10,7 +10,7 @@ function TopMenu() {
 
     const router = useRouter();
     const [width, setWidth] = useState(1000);
-    const [transform, setTransform] = useState(-100);
+    const [transform, setTransform] = useState(-20);
 
     var focus = { color: '#5A4FCF', borderColor: '#5A4FCF' };
     useEffect(() => {
@@ -18,15 +18,20 @@ function TopMenu() {
     }, [])
     var menuFocus = {
         select: {
-            color: 'white'
+            color: 'black',
+            padding: '4px 10px',
+            borderRadius: '4px',
+            backgroundColor: 'white'
         },
         deny: {
-            color: 'black'
+            color: 'white',
+            borderBottom: '4px solid white',
+            borderRadius: '4px',
         }
     }
 
     const menu = async () => {
-        setTransform(0)
+        setTransform(-20)
     }
     const close = async () => {
         setTransform(-100)
@@ -35,16 +40,13 @@ function TopMenu() {
 
     return (
         <>
-            <div className={styles.menu} style={{ transform: `translateY(${transform}rem)` }} >
-                <div className={styles.top}>
-                    <Image
-                        src="/home/cancel.png"
-                        alt="rankboost logo"
-                        width={40}
-                        height={40}
-                        onClick={close}
-                    />
-                </div>
+            <div className={styles.menu} style={{ transform: `translateX(${transform}%)` }} >
+                <Image
+                    src="/logo2.png"
+                    alt="rankboost logo"
+                    width={200}
+                    height={200}
+                />
                 <div className={styles.MenuOne}>
                     <ul>
                         <li><Link style={router.pathname === '/' ? menuFocus.select : menuFocus.deny} href={'/'}>Home</Link></li>
@@ -67,13 +69,22 @@ function TopMenu() {
                 {
                     width < 480
                         ?
-                        <Image
-                            src="/home/menu.png"
-                            alt="rankboost logo"
-                            width={40}
-                            height={40}
-                            onClick={menu}
-                        />
+                        transform === -20 ?
+                            <Image
+                                src="/home/cancel.png"
+                                alt="rankboost logo"
+                                width={40}
+                                height={40}
+                                onClick={close}
+                            />
+                            :
+                            <Image
+                                src="/home/menu.png"
+                                alt="rankboost logo"
+                                width={40}
+                                height={40}
+                                onClick={menu}
+                            />
                         :
                         <div className={styles.one}>
                             <ul>

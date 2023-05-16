@@ -51,17 +51,17 @@
 .menu {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     background-color: $accent;
     transition: all 1s;
     padding: 2rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    padding-left: 6rem;
 
-    .top {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
 
     .MenuOne {
         height: 100%;
