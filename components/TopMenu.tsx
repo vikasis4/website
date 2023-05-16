@@ -10,7 +10,7 @@ function TopMenu() {
 
     const router = useRouter();
     const [width, setWidth] = useState(1000);
-    const [transform, setTransform] = useState(-20);
+    const [transform, setTransform] = useState(-100);
 
     var focus = { color: '#5A4FCF', borderColor: '#5A4FCF' };
     useEffect(() => {
