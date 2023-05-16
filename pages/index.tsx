@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import TopMenu from '@/components/TopMenu'
@@ -6,6 +7,11 @@ import ExploreBtn from '@/components/ExploreBtn'
 import Footer from '@/components/Footer'
 
 export default function Home() {
+
+  const [width, setWidth] = useState(1000);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [])
 
   var object = {
     link: '/home/star.png',
@@ -38,18 +44,34 @@ export default function Home() {
             </h2>
             <ExploreBtn fontSize='1.8rem' width={35} height={35} />
           </div>
-          <Image
-            src="/home/main.png"
-            alt="rankboost logo"
-            width={500}
-            height={500}
-          />
+          {
+            width < 480 ?
+              ''
+              :
+              <Image
+                src="/home/main.png"
+                alt="rankboost logo"
+                width={500}
+                height={500}
+              />
+          }
         </div>
 
         <div className={styles.two}>
-          <h1>1000+<br />Jee Mains</h1>
-          <h1>800+<br />Jee Advance</h1>
-          <h1>3000+<br />Students Guided</h1>
+          {
+            width < 480 ?
+              <>
+                <h1>1000+<br /> Mains</h1>
+                <h1>800+<br /> Advance</h1>
+                <h1>3000+<br />Students</h1>
+              </>
+              :
+              <>
+                <h1>1000+<br />Jee Mains</h1>
+                <h1>800+<br />Jee Advance</h1>
+                <h1>3000+<br />Students Guided</h1>
+              </>
+          }
         </div>
 
         <div className={styles.three}>
@@ -59,18 +81,19 @@ export default function Home() {
           <Image
             src="/home/djx.png"
             alt="rankboost selection"
-            width={500}
+            width={width < 480 ? width-10 : 500}
             height={500}
           />
         </div>
 
         <div className={styles.four}>
-          <h1>Download Our App to Access Our Services</h1>
+          <h1>Download Our App</h1>
           <Image
             src="/googlePlay.png"
             alt="rankboost selection"
-            width={400}
-            height={150}
+            width={width < 480 ? width - 40 : 400}
+            height={120}
+            style={{boxShadow:'0 0 8px 2px white'}}
           />
         </div>
 

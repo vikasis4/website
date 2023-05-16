@@ -67,21 +67,90 @@
     }
 }
 
-.four{
+.four {
     @include flex(center, center, column);
     background-image: url("/home/parallax.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    gap:2rem;
+    gap: 2rem;
 
-        padding-bottom: 2rem;
-    
+    padding-bottom: 2rem;
 
-    h1{
-        color:white;
-        text-align:center;
-        padding-top:2rem
+
+    h1 {
+        color: white;
+        text-align: center;
+        padding-top: 2rem
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main {
+        padding-top: 6rem
+    }
+
+    .one {
+        
+        .one_one {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            h1 {
+                font-size: 2.6rem;
+                line-height: 1.2;
+            }
+
+            h2 {
+                main {
+                    gap: 0.4rem;
+                }
+                line-height: 1.5;
+                font-size:1rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .two {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+        background-image: url("/home/giphy.gif");
+        background-attachment: scroll;
+
+        h1 {
+            padding: 0.2rem;
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+        }
+    }
+
+    .three {
+        @include flex(space-around, center, column);
+        padding-top: 2rem;
+
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .four {
+        gap: 2rem;
+        background-image: url("/home/giphyw.gif");
+        background-attachment: scroll;
+        padding-bottom: 4rem;
+        padding-top: 2rem;
+
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 8px black;
+            text-align: center;
+            padding-top: 2rem
+        }
     }
 }

@@ -31,7 +31,7 @@
             li {
                 padding-bottom: 3px;
                 transition: all 0.3s;
-                
+
                 a {
                     border-bottom: 2px solid black;
                     color: black;
@@ -43,6 +43,44 @@
                     }
                 }
 
+            }
+        }
+    }
+}
+
+.menu {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: $accent;
+    transition: all 1s;
+    padding: 2rem;
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .MenuOne {
+        height: 100%;
+
+        ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            li {
+                margin-bottom: 3rem;
+
+                a {
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
             }
         }
     }

@@ -1,50 +1,70 @@
 @import "mixin";
 @import "variable";
 
-.one{
-    background-color:$bg2;
+.one {
+    background-color: $bg2;
     @include flex(center, center, column);
     padding-top: 3rem;
 }
-.two{
-    background-color:$bg2;
+
+.two {
+    background-color: $bg2;
     padding-top: 3rem;
     @include flex(space-around, flex-start, row);
-    .two_1{
-        h1{
-            font-weight:600;
+
+    .two_1 {
+        h1 {
+            font-weight: 600;
             border-bottom: 2px solid black;
         }
-        ul{
+
+        ul {
             @include flex(space-around, flex-start, column);
             list-style: none;
-            gap:0.2rem;
+            gap: 0.2rem;
             padding-top: 2rem;
-            li{
-                a{
-                    font-weight:600;
-                    color:black;
+
+            li {
+                a {
+                    font-weight: 600;
+                    color: black;
                 }
             }
         }
     }
-    .two_2{
-        h1{
-            font-weight:600;
+
+    .two_2 {
+        h1 {
+            font-weight: 600;
             border-bottom: 2px solid black;
         }
-        ul{
+
+        ul {
             @include flex(space-around, center, row);
             padding-top: 2rem;
             list-style: none;
-            gap:1rem
+            gap: 1rem
         }
     }
 }
-.mark{
+
+.mark {
     text-align: center;
-    background-color:$bg2;
+    background-color: $bg2;
     font-size: 1rem;
     padding-top: 2rem;
     padding-bottom: 0.4rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .two {
+        @include flex(space-around, center, column-reverse);
+        gap: 3rem;
+
+        .two_1 {
+            ul {
+                @include flex(space-around, center, column);
+            }
+        }
+    }
 }
