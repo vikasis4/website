@@ -93,7 +93,6 @@ export default function Home() {
             alt="rankboost selection"
             width={width < 480 ? width - 40 : 400}
             height={120}
-            style={{boxShadow:'0 0 8px 2px white'}}
           />
         </div>
 
