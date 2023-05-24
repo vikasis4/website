@@ -23,6 +23,9 @@ app.prepare()
                 else { console.log('Sent:', fileName) }
             });
         })
+        server.get('/api/json', (req, res) => {
+            res.json({ data:true})
+        })
 
         server.get('*', (req, res) => {
             return handle(req, res)
