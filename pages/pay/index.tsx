@@ -151,7 +151,7 @@ export default function index() {
 				</tr>
 				<tr>
 					<td>Customer Id:</td>
-					<td><input type="text" name="customer_identifier" value="" /></td>
+					<td><input type="text" name="customer_identifier" value="we" /></td>
 				</tr>
 				<tr>
 					<td></td>
