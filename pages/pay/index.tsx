@@ -18,7 +18,7 @@ export default function index() {
 				</tr>
 				<tr>
 					<td>Order Id</td>
-					<td><input type="text" name="order_id" value="" /></td>
+					<td><input type="text" name="order_id" value="krow" /></td>
 				</tr>
 				<tr>
 					<td>Currency</td>
