@@ -27,6 +27,7 @@ const Footer = () => {
                         <li><Link href={'/info/refund'}>Refund Policy</Link></li>
                         <li><Link href={'/info/privacy'}>Privacy Policy</Link></li>
                         <li><Link href={'/info/term'}>Terms and Conditions</Link></li>
+                        <li><Link href={'/product_pricing'}>Products and Pricing</Link></li>
                     </ul>
                 </div>
                 <div className={styles.two_2}>

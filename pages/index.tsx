@@ -93,6 +93,7 @@ export default function Home() {
             alt="rankboost selection"
             width={width < 480 ? width - 40 : 400}
             height={120}
+            onClick={()=> window.open("https://play.google.com/store/apps/details?id=com.rankboost.live")}
           />
         </div>
 
