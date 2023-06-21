@@ -1,13 +1,15 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from '@/styles/Abouts.module.scss'
 import TopMenu from '@/components/TopMenu'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 
-function index() {
+function Index() {
 
-    let width = 1000;
-    width = window.innerWidth;
+    const [width, setWidth] = useState(1000);
+    useEffect(() => {
+      setWidth(window.innerWidth);
+    }, [])
 
     return (
         <>
@@ -41,4 +43,4 @@ function index() {
     )
 }
 
-export default index
+export default Index
