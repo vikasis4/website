@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styles from '@/styles/Abouts.module.scss'
 import TopMenu from '@/components/TopMenu'
 import Footer from '@/components/Footer'
@@ -6,10 +6,8 @@ import Image from 'next/image'
 
 function index() {
 
-    const [width, setWidth] = useState(1000);
-    useEffect(() => {
-      setWidth(window.innerWidth);
-    }, [])
+    let width = 1000;
+    width = window.innerWidth;
 
     return (
         <>
