@@ -28,6 +28,7 @@ const Footer = () => {
                         <li><Link href={'/info/privacy'}>Privacy Policy</Link></li>
                         <li><Link href={'/info/term'}>Terms and Conditions</Link></li>
                         <li><Link href={'/product_pricing'}>Products and Pricing</Link></li>
+                        <li onClick={()=> window.open("https://merchant.razorpay.com/policy/M4Tp5bgyI3AqcC/shipping")}>Shipping & Delivery Policy</li>
                     </ul>
                 </div>
                 <div className={styles.two_2}>
