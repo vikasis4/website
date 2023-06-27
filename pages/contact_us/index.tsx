@@ -9,7 +9,7 @@ function index() {
             <TopMenu />
             <div className={styles.one}>
                 <h1>Contact Us</h1>
-                <h2>if you want to talk to us related to any issue or want to raise any query related to the business you can contact us through our Email. Our company address is #5, lucky garden, dalip garh, ambala cantt, haryana and pincode is 133001</h2>
+                <h2>if you want to talk to us related to any issue or want to raise any query related to the business you can contact us through our Email. Our company address is near shiv shakti nagar board, anand nagar, boh road, Ambala cantt, haryana and pincode is 133001</h2>
             </div>
             <div className={styles.ftwo}>
                 <h1><span>EMAIL :- </span> support@rankboost.live </h1>
